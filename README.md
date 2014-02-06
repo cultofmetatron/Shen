@@ -1,8 +1,17 @@
 generator-fuu
 =============
-###work in progress, feel free to contribute ideas
 
-higher order flow control functions for creating generators
+#higher order flow control functions for creating generators
+####(work in progress, feel free to contribute ideas)
+
+##Todo list
+
+get tests written!!
+
+### cascade
+
+Takes a set of generators and returns a massive generator that we can pass
+into a koa app's .use() or co() function. 
 
 ```javascript
   var genFuu = require('generator-fuu');
@@ -14,6 +23,15 @@ higher order flow control functions for creating generators
     },
     function *(next) {
       console.log('here\'s our second');
+      yield next;
+    },
+    function *() {
+      console.log('here\'s our second');
     }
   ));
+```
+  outputs
+```
+  output goes here
+
 ```
