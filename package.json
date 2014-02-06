@@ -1,10 +1,29 @@
 {
+  "name": "generator-fuu",
+  "version": "0.0.1",
+  "author": "Peter de Croos <cultofmetatron@aumlogic.com>",
+  "description": "Functional programming for generators",
+  "contributors": [ 
+    {
+      "name": "Peter de Croos",
+      "email": "cultofmetatron@aumlogic.com"
+    } 
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cultofmetatron/generator-fuu.git"
+  },
   "devDependencies": {
     "mocha": "~1.17.1",
     "should": "~3.1.2"
   },
   "dependencies": {
     "co": "~3.0.2",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.11"
   }
 }
