@@ -41,11 +41,9 @@ describe('Cascade', function() {
       function *(next) {
         var val = yield defer.promise;
         val.should.equal('resolved');
-        done();
       });
-    
-    co(genFunc)();
-
+    co(genFunc)(done);
+    //resolve the promise asyncronously
     setTimeout(function() {
       defer.resolve('resolved');
     }, 500);

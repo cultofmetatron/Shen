@@ -9,7 +9,6 @@ describe('Branch', function() {
     fuu.branch.should.be.type('function');
   });
 
-
   it('should return a generator', function() {
     var genFunc = fuu.branch();
     genFunc.constructor.name.should.equal('GeneratorFunction');
@@ -29,7 +28,6 @@ describe('Branch', function() {
         stub = 6;
       });
     co(genFunc)(done);
-  
   });
   
   it('should yield to the third argument', function(done) {
@@ -46,7 +44,6 @@ describe('Branch', function() {
         stub = 6;
       });
     co(genFunc)(done);
-  
   });
 
 
