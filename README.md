@@ -4,6 +4,7 @@ generator-fuu
 
 higher order flow control functions for creating generators
 
+```javascript
   var genFuu = require('generator-fuu');
 
   co(genFuu.cascade(
@@ -15,3 +16,4 @@ higher order flow control functions for creating generators
       console.log('here\'s our second');
     }
   ));
+```
