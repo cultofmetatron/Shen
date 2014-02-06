@@ -29,7 +29,7 @@ describe('Branch', function() {
       });
     co(genFunc)(done);
   });
-  
+
   it('should yield to the third argument', function(done) {
     var stub;
     var genFunc = fuu.branch(
@@ -45,6 +45,28 @@ describe('Branch', function() {
       });
     co(genFunc)(done);
   });
+
+   it('should resolve promises in sync', function(done) {
+    var defer = Promise.defer();
+    var val;
+    var genFunc = fuu.cascade(
+      function *(path1) {
+        yield path1;
+        val.should.equal('resolved');
+        
+      }, function *(next) {
+        val = yield defer.promise;
+      }, function *() {
+      
+      });
+    co(genFunc)(done);
+    //resolve the promise asyncronously
+    setTimeout(function() {
+      defer.resolve('resolved');
+    }, 500);
+  });
+
+
 
 
 
