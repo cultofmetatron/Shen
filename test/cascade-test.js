@@ -49,6 +49,30 @@ describe('Cascade', function() {
     }, 500);
   });
 
+  it('should pass returned values to the next function', function(done) {
+    var list = [];
+    var genFunc = fuu.cascade(
+      function *(next) {
+        list.push(1);
+        var b = yield next;
+        list.push(3);
+        console.log('here\'s our b', b);
+        return b;
+      },
+      function *() {
+        list.push(2);
+        return "ret";
+      });
+
+    co(genFunc)(function(err, val) {
+      console.log('here them args', arguments);
+      val.should.equal('ret');
+      done();
+    
+    });
+
+  });
+
 
 });
 
