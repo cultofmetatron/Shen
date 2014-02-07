@@ -68,40 +68,14 @@ describe('Cascade', function() {
           list.push(7);
           return 'ret';
         }));
-/*
-    co(function *(next) {
-      next = (utils.isGenerator(next)) ? next : (function *(nextCo) { yield nextCo; }).call(this);
-      return yield compose([
-        function *(next) {
-          list.push(1);
-          var b = yield next;
-          list.push(3);
-          return b;
-        },
-        compose([
-          function *(next) {
-            list.push(2);
-            return yield next;
-          },
-          function *() {
-            list.push(7);
-            return 'ret';
-        }])])
-    }
-    )(function(err, val) {
-      console.log('does it work with this one? in co?', val);
-    
-    });
-*/
+
     co(genFunc)(function(err, val) {
-      console.log(list)
       list.should.have.property('0', 1);
       list.should.have.property('1', 2);
       list.should.have.property('2', 7);
       list.should.have.property('3', 3);
       val.should.equal('ret');
       done();
-    
     });
 
   });

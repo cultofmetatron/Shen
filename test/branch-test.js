@@ -83,10 +83,13 @@ describe('Branch', function() {
           function *() {
             return 'returned path 1';
           }),
-        function *() {
+        function *(next) {
           //doesn't get run
-          return 'returned path 2';
-        }));
+          return yield next;
+        }),
+      function *() {
+        return 'returned path 2';
+      });
 
       co(genFunc)(function(err, value) {
         value.should.equal('returned path 2');
