@@ -68,8 +68,30 @@ describe('Branch', function() {
     }, 0);
   });
 
-  it('should nest with cascade', function() {
-    
+  it('should work nested in cascade', function(done) {
+    var genFunc = fuu.cascade(function *(next) {
+        return yield next;
+      },
+      fuu.branch(
+        function *(path1, path2) {
+          return yield path2;
+        },
+        fuu.cascade(
+          function *(next) {
+            return yield next;
+          },
+          function *() {
+            return 'returned path 1';
+          }),
+        function *() {
+          //doesn't get run
+          return 'returned path 2';
+        }));
+
+      co(genFunc)(function(err, value) {
+        value.should.equal('returned path 2');
+        done();
+      });
   
   });
 
