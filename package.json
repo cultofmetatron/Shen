@@ -20,7 +20,8 @@
   "dependencies": {
     "co": "~3.0.2",
     "underscore": "~1.5.2",
-    "bluebird": "~1.0.3"
+    "bluebird": "~1.0.3",
+    "koa-compose": "~2.2.0"
   },
   "license": "MIT",
   "engines": {

@@ -48,26 +48,29 @@ describe('Branch', function() {
 
    it('should resolve promises in sync', function(done) {
     var defer = Promise.defer();
-    var val;
-    var genFunc = fuu.cascade(
+    var genFunc = fuu.branch(
       function *(path1) {
-        yield path1;
-        val.should.equal('resolved');
-        
+        var val = yield path1;
+        return val;
       }, function *(next) {
         val = yield defer.promise;
+        return val;
       }, function *() {
-      
+        //this never runs
       });
-    co(genFunc)(done);
+    co(genFunc)(function(err, val) {
+      val.should.equal('resolved');
+      done();
+    });
     //resolve the promise asyncronously
     setTimeout(function() {
       defer.resolve('resolved');
-    }, 500);
+    }, 0);
   });
 
-
-
-
+  it('should nest with cascade', function() {
+    
+  
+  });
 
 });
