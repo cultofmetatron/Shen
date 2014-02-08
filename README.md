@@ -21,7 +21,8 @@ library I've seen out there is TJHollowaychuck's co module.
 
 Shen is a set of tools for constructing generators from smaller generators.
 The end result is a fully asynchronous control flow coroutine in which we can write 
-asychronous code that looks synchronous!
+asychronous code that looks synchronous! Eeven better, the are all nestable so you can 
+build arbitrarily large generators from smaller ones
 
 ####shen.cascade(gen1, gen2...genN);
 
@@ -99,6 +100,7 @@ With this you can set up conditional branches to either path1 or path2.
     co(genFunc)(done);
   });
 ```
+
 
 
 
