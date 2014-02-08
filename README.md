@@ -1,7 +1,7 @@
-generator-fuu
+Shen
 =============
 
-##higher order flow control functions for creating generators
+####higher order flow control functions for creating generators
 #####(work in progress, feel free to contribute ideas)
 
 ##The dream
