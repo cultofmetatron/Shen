@@ -14,21 +14,13 @@ describe('Delay', function() {
     //defer = Promise.defer();
     var start = Date.now();
     //defer.resolve('resolved');
-    var genFunc = fuu.cascade(function *(next) {
-      console.log('yiea');
+    var genFunc = function *() {
       var delay = Date.now() - timeStamp;
-      console.log(delay);
-      yield next;
       return delay;
-    }, function *() {
-      console.log('second function');
-
-    });
+    };
 
     co(fuu.delay(genFunc, 3000))(function (err, delay) {
-      console.log('foo');
-      console.log('the delay: ', delay);
-      delay.should.be.greaterThan(3000);
+      delay.should.be.greaterThan(2950);
       done();
     });
 
