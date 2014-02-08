@@ -4,7 +4,7 @@ Shen
 ####higher order flow control functions for creating generators
 #####(work in progress, feel free to contribute ideas)
 
-##The dream
+##Higher order functions for generators
 
 Generators are the new concurrency being implimented for ecmascript 6.
 There is scant information on how generators work. The one really useful 
@@ -19,10 +19,12 @@ library I've seen out there is TJHollowaychuck's co module.
   })();
 ```
 
-Shen is a set of tools for constructing generators from smaller generators.
-The end result is a fully asynchronous control flow coroutine in which we can write 
-asychronous code that looks synchronous! Even better, the are all nestable so you can 
-build arbitrarily large generators from smaller ones
+Shen is a set of tools for constructing generators from smaller generators. Through,
+composition Shen allows you to assemble coroutines from smaller coroutines. The asychronous 
+code even looks synchronous! 
+
+They are all nestable so you can build arbitrarily large generators from smaller ones like
+lego pieces.
 
 ####shen.cascade(gen1, gen2...genN);
 
