@@ -50,7 +50,6 @@ describe('parallel', function() {
     
     co(genFunc)(function(err, val) {
       var countOne = !!val[0].match('google');
-      console.log(countOne);
       countOne.should.be.true;
       
       var countTwo = val[1] === 'two';
