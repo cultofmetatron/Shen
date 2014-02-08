@@ -23,11 +23,6 @@ Shen is a set of tools for constructing generators from smaller generators.
 The end result is a fully asynchronous control flow coroutine in which we can write 
 asychronous code that looks synchronous!
 
-### cascade
-
-Takes a set of generators and returns a massive generator that we can pass
-into a koa app's .use() or co() function. 
-
 ####shen.cascade(gen1, gen2...genN);
 
 Takes one or more generators and returns a new generator that can be passed
