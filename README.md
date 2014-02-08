@@ -101,6 +101,22 @@ With this you can set up conditional branches to either path1 or path2.
   });
 ```
 
+####shen.dispatch(gen, map)
+
+Takes a generator and an object of genertors. Inside gen, you can yield control
+to one of the generators inside the map.
+
+```javascript
+
+  //code exmple coming soon
+
+```
+
+####shen.delay(gen, timeout)
+
+Takes a generator and timeout. it returns a generator that runs the 
+passed in generator after the timeout.
+
 
 
 
