@@ -15,7 +15,8 @@
   },
   "devDependencies": {
     "mocha": "~1.17.1",
-    "should": "~3.1.2"
+    "should": "~3.1.2",
+    "request": "~2.33.0"
   },
   "dependencies": {
     "co": "~3.0.2",

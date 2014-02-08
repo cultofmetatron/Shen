@@ -4,5 +4,8 @@ module.exports = {
   cascade   : require('./lib/cascade.js'),
   branch    : require('./lib/branch.js'),
   delay     : require('./lib/delay.js'),
-  dispatch  : require('./lib/dispatch.js')
+  dispatch  : require('./lib/dispatch.js'),
+  parallel  : require('./lib/parallel.js')
 };
+
+
