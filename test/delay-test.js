@@ -8,7 +8,7 @@ var utils   = require('../lib/utils.js');
 
 describe('Delay', function() {
   
-  xit('should delay timeout', function(done) {
+  it('should delay timeout', function(done) {
     this.timeout(10000);
     var timeStamp = Date.now();
     //defer = Promise.defer();
@@ -28,7 +28,7 @@ describe('Delay', function() {
     co(fuu.delay(genFunc, 3000))(function (err, delay) {
       console.log('foo');
       console.log('the delay: ', delay);
-      delay.should.be.greaterThan(2000);
+      delay.should.be.greaterThan(3000);
       done();
     });
 
