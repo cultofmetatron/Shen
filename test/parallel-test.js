@@ -49,15 +49,11 @@ describe('parallel', function() {
       }));
     
     co(genFunc)(function(err, val) {
-      countOne = _.some(val, function(elem) {
-        if (elem.match('google')) {
-          return true;
-        }
-        return false;
-      }, this);
+      var countOne = !!val[0].match('google');
+      console.log(countOne);
       countOne.should.be.true;
       
-      var countTwo = _.contains(val, 'two');
+      var countTwo = val[1] === 'two';
       countTwo.should.be.true;
       done();
     });

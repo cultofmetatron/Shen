@@ -112,11 +112,24 @@ to one of the generators inside the map.
 
 ```
 
+####shen.parallel(gen1, gen2, gen3... genN)
+
+Takes one or more generators. All the generators are run asychronosly. The
+returned values can be returned upstream into an array yelded from the generators
+yielding to the parallel generator.
+
+```javascript
+
+  //code exmple coming soon
+
+```
+
+
+
 ####shen.delay(gen, timeout)
 
 Takes a generator and timeout. it returns a generator that runs the 
 passed in generator after the timeout.
-
 
 
 
