@@ -1,5 +1,5 @@
 var should  = require('should');
-var fuu     = require('../index.js');
+var shen     = require('../index.js');
 var co      = require('co');
 var Promise = require('bluebird');
 var compose = require('koa-compose');
@@ -7,17 +7,17 @@ var utils   = require('../lib/utils.js');
 describe('Cascade', function() {
   
   it('should be a function', function() {
-    fuu.cascade.should.be.type('function');
+    shen.cascade.should.be.type('function');
   });
 
   it('should return a generator', function() {
-    var genFunc = fuu.cascade();
+    var genFunc = shen.cascade();
     genFunc.constructor.name.should.equal('GeneratorFunction');
   });
 
   it('should return a generator that returns a value to co', function(done) {
     var list = [];
-    var genFunc = fuu.cascade(
+    var genFunc = shen.cascade(
       function *() {
         //its right here
         list.push(1);
@@ -35,7 +35,7 @@ describe('Cascade', function() {
 
   it('should yield values downstream and return upsteam', function(done) {
     var list = [];
-    var genFunc = fuu.cascade(
+    var genFunc = shen.cascade(
       function *(next) {
         list.push(1);
         return yield next;
@@ -43,7 +43,7 @@ describe('Cascade', function() {
         list.push(2)
         return yield next;
       }, function *() {
-        list.push(3)
+        list.push(3);
         return list;
       });
 
@@ -61,7 +61,7 @@ describe('Cascade', function() {
   //
   it('should pass along context up and down', function(done) {
     
-    var genFunc = fuu.cascade(
+    var genFunc = shen.cascade(
       function *(next) {
         this.name = 'berry';
         yield next;
@@ -87,7 +87,7 @@ describe('Cascade', function() {
 
   it('should resolve promises in sync', function(done) {
     var defer = Promise.defer();
-    var genFunc = fuu.cascade(
+    var genFunc = shen.cascade(
       function *(next) {
         var val = yield defer.promise;
         val.should.equal('resolved');
@@ -101,14 +101,14 @@ describe('Cascade', function() {
 
   it('should pass returned values to the next function', function(done) {
     var list = [];
-    var genFunc = fuu.cascade(
+    var genFunc = shen.cascade(
       function *(next) {
         list.push(1);
         var b = yield next;
         list.push(3);
         return b;
       },
-      fuu.cascade(
+      shen.cascade(
         function *(next) {
           list.push(2);
           return yield next;

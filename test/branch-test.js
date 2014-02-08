@@ -1,22 +1,22 @@
 var should  = require('should');
-var fuu     = require('../index.js');
+var shen     = require('../index.js');
 var co      = require('co');
 var Promise = require('bluebird');
 
 describe('Branch', function() {
   
   it('should be a function', function() {
-    fuu.branch.should.be.type('function');
+    shen.branch.should.be.type('function');
   });
 
   it('should return a generator', function() {
-    var genFunc = fuu.branch();
+    var genFunc = shen.branch();
     genFunc.constructor.name.should.equal('GeneratorFunction');
   });
 
   it('should yield to the second argument', function(done) {
     var stub;
-    var genFunc = fuu.branch(
+    var genFunc = shen.branch(
       function *(path1, path2) {
         yield path1;
         stub.should.equal(5);
@@ -32,7 +32,7 @@ describe('Branch', function() {
 
   it('should yield to the third argument', function(done) {
     var stub;
-    var genFunc = fuu.branch(
+    var genFunc = shen.branch(
       function *(path1, path2) {
         yield path2;
         stub.should.equal(6);
@@ -48,7 +48,7 @@ describe('Branch', function() {
 
    it('should resolve promises in sync', function(done) {
     var defer = Promise.defer();
-    var genFunc = fuu.branch(
+    var genFunc = shen.branch(
       function *(path1) {
         var val = yield path1;
         return val;
@@ -69,14 +69,14 @@ describe('Branch', function() {
   });
 
   it('should work nested in cascade', function(done) {
-    var genFunc = fuu.cascade(function *(next) {
+    var genFunc = shen.cascade(function *(next) {
         return yield next;
       },
-      fuu.branch(
+      shen.branch(
         function *(path1, path2) {
           return yield path2;
         },
-        fuu.cascade(
+        shen.cascade(
           function *(next) {
             return yield next;
           },

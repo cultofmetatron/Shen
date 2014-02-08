@@ -1,7 +1,7 @@
 
 var should  = require('should');
 var _       = require('underscore');
-var fuu     = require('../index.js');
+var shen     = require('../index.js');
 var Promise = require('bluebird');
 var co      = require('co');
 var utils   = require('../lib/utils.js');
@@ -19,7 +19,7 @@ describe('Delay', function() {
       return delay;
     };
 
-    co(fuu.delay(genFunc, 3000))(function (err, delay) {
+    co(shen.delay(genFunc, 3000))(function (err, delay) {
       delay.should.be.greaterThan(2950);
       done();
     });
