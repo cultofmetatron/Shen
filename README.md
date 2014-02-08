@@ -61,7 +61,7 @@ to yield downstream to the next generator on the list.
   });
 ```
 
-####shen.bridge(cond, path1, path2)
+####shen.branch(cond, path1, path2)
 
 Takes a three generators. The first one recieves links to the other two. 
 With this you can set up conditional branches to either path1 or path2.
