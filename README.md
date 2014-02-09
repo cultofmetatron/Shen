@@ -1,8 +1,10 @@
-Shen [![Build Status](https://travis-ci.org/cultofmetatron/Shen.png?branch=master)](https://travis-ci.org/cultofmetatron/Shen) [![dependency Status](https://david-dm.org/cultofmetatron/Shen/status.png?theme=shields.io)](https://david-dm.org/cultofmetatron/Shen#info=dependencies) [![devDependency Status](https://david-dm.org/cultofmetatron/Shen/dev-status.png?theme=shields.io)](https://david-dm.org/cultofmetatron/Shen#info=devDependencies)
+Shen 身
 =============
+[![Build Status](https://travis-ci.org/cultofmetatron/Shen.png?branch=master)](https://travis-ci.org/cultofmetatron/Shen) [![dependency Status](https://david-dm.org/cultofmetatron/Shen/status.png?theme=shields.io)](https://david-dm.org/cultofmetatron/Shen#info=dependencies) [![devDependency Status](https://david-dm.org/cultofmetatron/Shen/dev-status.png?theme=shields.io)](https://david-dm.org/cultofmetatron/Shen#info=devDependencies)
 
-####Higher order flow control functions for creating generators
-#####(work in progress)
+> Higher order flow control functions for creating generators
+
+##### (work in progress)
 
 There's still alot of work to be done on this repo. I'm putting it out there
 for people to try out early and let you all get a taste of what's to come.
