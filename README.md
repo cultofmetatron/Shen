@@ -6,7 +6,7 @@ Shen
 
 ##Higher order functions for generators
 
-Generators are the new concurrency being implimented for ecmascript 6.
+Generators are the new concurrency primative slated for ecmascript 6.
 There is scant information on how generators work. The one really useful 
 library I've seen out there is TJHollowaychuck's co module.
 
@@ -20,11 +20,22 @@ library I've seen out there is TJHollowaychuck's co module.
 ```
 
 Shen is a set of tools for constructing generators from smaller generators. Through,
-composition Shen allows you to assemble coroutines from smaller coroutines. The asychronous 
-code even looks synchronous! 
+composition Shen allows you to assemble coroutines from smaller coroutines. The asychronous
+code even looks synchronous and the shnozberries taste like shnozberries!
 
 They are all nestable so you can build arbitrarily large generators from smaller ones like
 lego pieces.
+
+####shen.cascade(gen, ctx, [arg1, arg2 ...]);
+Takes a generator and binds it to the context, optional args are partially applied to the
+returned generator.
+
+```javascript
+
+  
+
+
+```
 
 ####shen.cascade(gen1, gen2...genN);
 
