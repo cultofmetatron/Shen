@@ -1,8 +1,11 @@
 Shen
 =============
 
-####higher order flow control functions for creating generators
-#####(work in progress, feel free to contribute ideas)
+####Higher order flow control functions for creating generators
+#####(work in progress)
+
+There's still alot of work to be done on this repo. I'm putting it out there
+for people to try out early and let you all get a taste of what's to come.
 
 ##Higher order functions for generators
 
