@@ -18,7 +18,8 @@
     "should": "~3.1.2",
     "request": "~2.33.0",
     "gulp": "~3.5.2",
-    "gulp-uglify": "~0.2.1"
+    "gulp-uglify": "~0.2.1",
+    "koa": "~0.3.0"
   },
   "dependencies": {
     "co": "~3.0.2",
