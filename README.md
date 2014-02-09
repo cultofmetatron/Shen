@@ -1,4 +1,4 @@
-Shen
+Shen [![Build Status](https://travis-ci.org/cultofmetatron/Shen.png?branch=master)](https://travis-ci.org/cultofmetatron/Shen) [![dependency Status](https://david-dm.org/cultofmetatron/Shen/status.png?theme=shields.io)](https://david-dm.org/cultofmetatron/Shen#info=dependencies) [![devDependency Status](https://david-dm.org/cultofmetatron/Shen/dev-status.png?theme=shields.io)](https://david-dm.org/cultofmetatron/Shen#info=devDependencies)
 =============
 
 ####higher order flow control functions for creating generators
@@ -7,7 +7,7 @@ Shen
 ##Higher order functions for generators
 
 Generators are the new concurrency being implimented for ecmascript 6.
-There is scant information on how generators work. The one really useful 
+There is scant information on how generators work. The one really useful
 library I've seen out there is TJHollowaychuck's co module.
 
 ```javascript
@@ -20,8 +20,8 @@ library I've seen out there is TJHollowaychuck's co module.
 ```
 
 Shen is a set of tools for constructing generators from smaller generators. Through,
-composition Shen allows you to assemble coroutines from smaller coroutines. The asychronous 
-code even looks synchronous! 
+composition Shen allows you to assemble coroutines from smaller coroutines. The asychronous
+code even looks synchronous!
 
 They are all nestable so you can build arbitrarily large generators from smaller ones like
 lego pieces.
@@ -30,7 +30,7 @@ lego pieces.
 
 Takes one or more generators and returns a new generator that can be passed
 into a coroutine function. each generator is passed a *next* which allows you
-to yield downstream to the next generator on the list. 
+to yield downstream to the next generator on the list.
 
 ```javascript
 
@@ -66,7 +66,7 @@ to yield downstream to the next generator on the list.
 
 ####shen.branch(cond, path1, path2)
 
-Takes a three generators. The first one recieves links to the other two. 
+Takes a three generators. The first one recieves links to the other two.
 With this you can set up conditional branches to either path1 or path2.
 
 ```javascript
@@ -130,7 +130,7 @@ yielding to the parallel generator.
 
 ####shen.delay(gen, timeout)
 
-Takes a generator and timeout. it returns a generator that runs the 
+Takes a generator and timeout. it returns a generator that runs the
 passed in generator after the timeout.
 
 
