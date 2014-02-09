@@ -1,0 +1,170 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/peterdecroos/.nvm/v0.11.11/bin/node',
+1 verbose cli   '/Users/peterdecroos/.nvm/v0.11.11/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@1.3.25
+3 info using node@v0.11.11
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/peterdecroos/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/tmp.tgz
+12 verbose folder .
+13 info prepublish shen@0.0.1
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/peterdecroos/.npm/1f1177db-tar.lock
+16 silly lockFile 297160e6-74446-0-5789398739580065-tmp-tgz tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/tmp.tgz
+17 verbose lock tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/tmp.tgz /Users/peterdecroos/.npm/297160e6-74446-0-5789398739580065-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 297160e6-74446-0-5789398739580065-tmp-tgz tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/tmp.tgz
+21 silly lockFile 297160e6-74446-0-5789398739580065-tmp-tgz tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/tmp.tgz
+22 verbose tar unpack /var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/tmp.tgz
+23 silly lockFile 4c854300-74446-0-5789398739580065-package tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/package
+24 verbose lock tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/package /Users/peterdecroos/.npm/4c854300-74446-0-5789398739580065-package.lock
+25 silly lockFile 297160e6-74446-0-5789398739580065-tmp-tgz tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/tmp.tgz
+26 verbose lock tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/tmp.tgz /Users/peterdecroos/.npm/297160e6-74446-0-5789398739580065-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm extractEntry README.md
+31 silly gunzTarPerm extractEntry gulp.js
+32 silly gunzTarPerm extractEntry index.js
+33 silly gunzTarPerm extractEntry lib/bind.js
+34 silly gunzTarPerm extractEntry lib/branch.js
+35 silly gunzTarPerm extractEntry lib/cascade.js
+36 silly gunzTarPerm extractEntry lib/co.js
+37 silly gunzTarPerm extractEntry lib/delay.js
+38 silly gunzTarPerm extractEntry lib/dispatch.js
+39 silly gunzTarPerm extractEntry lib/oscillator.js
+40 silly gunzTarPerm extractEntry lib/parallel.js
+41 silly gunzTarPerm extractEntry lib/utils.js
+42 silly gunzTarPerm extractEntry lib/.gitkeep
+43 silly gunzTarPerm extractEntry test/branch-test.js
+44 silly gunzTarPerm extractEntry test/cascade-test.js
+45 silly gunzTarPerm extractEntry test/delay-test.js
+46 silly gunzTarPerm extractEntry test/dispatch-test.js
+47 silly gunzTarPerm extractEntry test/oscillator-test.js
+48 silly gunzTarPerm extractEntry test/parallel-test.js
+49 silly gunzTarPerm extractEntry test/.gitkeep
+50 silly lockFile 4c854300-74446-0-5789398739580065-package tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/package
+51 silly lockFile 4c854300-74446-0-5789398739580065-package tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/package
+52 silly lockFile 297160e6-74446-0-5789398739580065-tmp-tgz tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/tmp.tgz
+53 silly lockFile 297160e6-74446-0-5789398739580065-tmp-tgz tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/tmp.tgz
+54 verbose tar pack [ '/Users/peterdecroos/.npm/shen/0.0.1/package.tgz',
+54 verbose tar pack   '/var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/package' ]
+55 verbose tarball /Users/peterdecroos/.npm/shen/0.0.1/package.tgz
+56 verbose folder /var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/package
+57 silly lockFile 4c854300-74446-0-5789398739580065-package tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/package
+58 verbose lock tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/package /Users/peterdecroos/.npm/4c854300-74446-0-5789398739580065-package.lock
+59 silly lockFile 33acda7b-croos-npm-shen-0-0-1-package-tgz tar:///Users/peterdecroos/.npm/shen/0.0.1/package.tgz
+60 verbose lock tar:///Users/peterdecroos/.npm/shen/0.0.1/package.tgz /Users/peterdecroos/.npm/33acda7b-croos-npm-shen-0-0-1-package-tgz.lock
+61 silly lockFile 4c854300-74446-0-5789398739580065-package tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/package
+62 silly lockFile 4c854300-74446-0-5789398739580065-package tar:///var/folders/09/snthfvbx4mg065rf8bzzhh000000gn/T/npm-10857-4-_CbQsA/1391917674446-0.5789398739580065/package
+63 silly lockFile 33acda7b-croos-npm-shen-0-0-1-package-tgz tar:///Users/peterdecroos/.npm/shen/0.0.1/package.tgz
+64 silly lockFile 33acda7b-croos-npm-shen-0-0-1-package-tgz tar:///Users/peterdecroos/.npm/shen/0.0.1/package.tgz
+65 silly lockFile 97d596d2-erdecroos-npm-shen-0-0-1-package /Users/peterdecroos/.npm/shen/0.0.1/package
+66 verbose lock /Users/peterdecroos/.npm/shen/0.0.1/package /Users/peterdecroos/.npm/97d596d2-erdecroos-npm-shen-0-0-1-package.lock
+67 silly lockFile 97d596d2-erdecroos-npm-shen-0-0-1-package /Users/peterdecroos/.npm/shen/0.0.1/package
+68 silly lockFile 97d596d2-erdecroos-npm-shen-0-0-1-package /Users/peterdecroos/.npm/shen/0.0.1/package
+69 verbose tar unpack /Users/peterdecroos/.npm/shen/0.0.1/package.tgz
+70 silly lockFile ba031309-erdecroos-npm-shen-0-0-1-package tar:///Users/peterdecroos/.npm/shen/0.0.1/package
+71 verbose lock tar:///Users/peterdecroos/.npm/shen/0.0.1/package /Users/peterdecroos/.npm/ba031309-erdecroos-npm-shen-0-0-1-package.lock
+72 silly lockFile 33acda7b-croos-npm-shen-0-0-1-package-tgz tar:///Users/peterdecroos/.npm/shen/0.0.1/package.tgz
+73 verbose lock tar:///Users/peterdecroos/.npm/shen/0.0.1/package.tgz /Users/peterdecroos/.npm/33acda7b-croos-npm-shen-0-0-1-package-tgz.lock
+74 silly gunzTarPerm modes [ '755', '644' ]
+75 silly gunzTarPerm extractEntry package.json
+76 silly gunzTarPerm extractEntry .npmignore
+77 silly gunzTarPerm extractEntry README.md
+78 silly gunzTarPerm extractEntry gulp.js
+79 silly gunzTarPerm extractEntry index.js
+80 silly gunzTarPerm extractEntry lib/bind.js
+81 silly gunzTarPerm extractEntry lib/branch.js
+82 silly gunzTarPerm extractEntry lib/cascade.js
+83 silly gunzTarPerm extractEntry lib/co.js
+84 silly gunzTarPerm extractEntry lib/delay.js
+85 silly gunzTarPerm extractEntry lib/dispatch.js
+86 silly gunzTarPerm extractEntry lib/oscillator.js
+87 silly gunzTarPerm extractEntry lib/parallel.js
+88 silly gunzTarPerm extractEntry lib/utils.js
+89 silly gunzTarPerm extractEntry lib/.gitkeep
+90 silly gunzTarPerm extractEntry test/branch-test.js
+91 silly gunzTarPerm extractEntry test/cascade-test.js
+92 silly gunzTarPerm extractEntry test/delay-test.js
+93 silly gunzTarPerm extractEntry test/dispatch-test.js
+94 silly gunzTarPerm extractEntry test/oscillator-test.js
+95 silly gunzTarPerm extractEntry test/parallel-test.js
+96 silly gunzTarPerm extractEntry test/.gitkeep
+97 silly lockFile ba031309-erdecroos-npm-shen-0-0-1-package tar:///Users/peterdecroos/.npm/shen/0.0.1/package
+98 silly lockFile ba031309-erdecroos-npm-shen-0-0-1-package tar:///Users/peterdecroos/.npm/shen/0.0.1/package
+99 silly lockFile 33acda7b-croos-npm-shen-0-0-1-package-tgz tar:///Users/peterdecroos/.npm/shen/0.0.1/package.tgz
+100 silly lockFile 33acda7b-croos-npm-shen-0-0-1-package-tgz tar:///Users/peterdecroos/.npm/shen/0.0.1/package.tgz
+101 verbose chmod /Users/peterdecroos/.npm/shen/0.0.1/package.tgz 644
+102 verbose chown /Users/peterdecroos/.npm/shen/0.0.1/package.tgz [ 501, 20 ]
+103 silly lockFile 3a52ce78- .
+104 silly lockFile 3a52ce78- .
+105 silly publish { name: 'shen',
+105 silly publish   version: '0.0.1',
+105 silly publish   author: { name: 'Peter de Croos', email: 'cultofmetatron@aumlogic.com' },
+105 silly publish   description: 'Functional programming for generators',
+105 silly publish   contributors: [ { name: 'Peter de Croos', email: 'cultofmetatron@aumlogic.com' } ],
+105 silly publish   repository:
+105 silly publish    { type: 'git',
+105 silly publish      url: 'https://github.com/cultofmetatron/Shen.git' },
+105 silly publish   devDependencies: { mocha: '~1.17.1', should: '~3.1.2', request: '~2.33.0' },
+105 silly publish   dependencies:
+105 silly publish    { co: '~3.0.2',
+105 silly publish      underscore: '~1.5.2',
+105 silly publish      bluebird: '~1.0.3',
+105 silly publish      'koa-compose': '~2.2.0' },
+105 silly publish   license: 'MIT',
+105 silly publish   engines: { node: '>=0.11' },
+105 silly publish   readme: 'Shen\n=============\n\n####Higher order flow control functions for creating generators\n#####(work in progress)\n\nThere\'s still alot of work to be done on this repo. I\'m putting it out there\nfor people to try out early and let you all get a taste of what\'s to come.\n\nIf you\'d like to contribute, I\'d love ideas for things to impliment.\nIts a brave new world so lets find out what makes sense!\nTests are also very much appreciated.\n\nyou can run the tests supplied with\n```\n  npm install\n  mocha --harmony test\n```\nMake sure to have node 0.11 installed or you\'ll be a sad panda!\n\n##Higher order functions for generators\n\nGenerators are the new concurrency primative slated for ecmascript 6.\nThere is scant information on how generators work. The one really useful \nlibrary I\'ve seen out there is TJHollowaychuck\'s co module.\n\n```javascript\n  var co      = require(\'co\');\n  co(function *() {\n    var data = yield someAsyncTask();\n    doStuffWithData(data);\n    return data;\n  })();\n```\n\nShen is a set of tools for constructing generators from smaller generators. Through,\ncomposition Shen allows you to assemble coroutines from smaller coroutines. The asychronous\ncode even looks synchronous and the shnozberries taste like shnozberries!\n\nThey are all nestable so you can build arbitrarily large generators from smaller ones like\nlego pieces.\n\n####shen.bind(gen, ctx, [arg1, arg2 ...]);\nTakes a generator and binds it to the context, optional args are partially applied to the\nreturned generator.\n\n```javascript\n  var shen = require(\'shen\');\n\n  var boundGenerator = shen.bind(function *() {\n    //etc\n  }, context);\n```\n\n####shen.cascade(gen1, gen2...genN);\n\nTakes one or more generators and returns a new generator that can be passed\ninto a coroutine function. each generator is passed a *next* which allows you\nto yield downstream to the next generator on the list. \n\n```javascript\n\n  it(\'should pass returned values to the next function\', function(done) {\n    var list = [];\n    var genFunc = shen.cascade(\n      function *(next) {\n        list.push(1);\n        var b = yield next;\n        list.push(3);\n        return b;\n      },\n      shen.cascade(\n        function *(next) {\n          list.push(2);\n          return yield next;\n        },\n        function *() {\n          list.push(7);\n          return \'ret\';\n        }));\n\n    co(genFunc)(function(err, val) {\n      list.should.have.property(\'0\', 1);\n      list.should.have.property(\'1\', 2);\n      list.should.have.property(\'2\', 7);\n      list.should.have.property(\'3\', 3);\n      val.should.equal(\'ret\');\n      done();\n    });\n  });\n```\n\n####shen.branch(cond, path1, path2)\n\nTakes a three generators. The first one recieves links to the other two. \nWith this you can set up conditional branches to either path1 or path2.\n\n```javascript\n  it(\'should yield to the second argument\', function(done) {\n    var stub;\n    var genFunc = shen.branch(\n      function *(path1, path2) {\n        yield path1;\n        stub.should.equal(5);\n      },\n      function *(next) {\n        stub = 5;\n      },\n      function *() {\n        stub = 6;\n      });\n    co(genFunc)(done);\n  });\n\n  it(\'should yield to the third argument\', function(done) {\n    var stub;\n    var genFunc = shen.branch(\n      function *(path1, path2) {\n        yield path2;\n        stub.should.equal(6);\n      },\n      function *(next) {\n        stub = 5;\n      },\n      function *() {\n        stub = 6;\n      });\n    co(genFunc)(done);\n  });\n```\n\n####shen.dispatch(gen, map)\n\nTakes a generator and an object of genertors. Inside gen, you can yield control\nto one of the generators inside the map.\n\n```javascript\n\n  //code example coming soon\n\n```\n\n####shen.parallel(gen1, gen2, gen3... genN)\n\nTakes one or more generators. All the generators are run asychronosly. The\nreturned values can be returned upstream into an array yelded from the generators\nyielding to the parallel generator.\n\n```javascript\n\n  //code example coming soon\n\n```\n\n\n\n####shen.delay(gen, timeout)\n\nTakes a generator and timeout. it returns a generator that runs the \npassed in generator after the timeout.\n\n```javascript\n\n  //code example coming soon\n\n```\n\n####shen.oscillator(gen, interval)\n\nTakes a generator and returns a generator which returns an eventEmitter that\ncalls a function with the return values from calling gen at specified intervals.\n\n```javascript\n\n  //code example coming soon\n\n```\n\n',
+105 silly publish   readmeFilename: 'README.md',
+105 silly publish   bugs: { url: 'https://github.com/cultofmetatron/Shen/issues' },
+105 silly publish   homepage: 'https://github.com/cultofmetatron/Shen',
+105 silly publish   _id: 'shen@0.0.1',
+105 silly publish   dist: { shasum: 'b9d74561e930b63e8b62b93df0b7913de9780b10' },
+105 silly publish   _from: '.' }
+106 verbose url raw shen
+107 verbose url resolving [ 'https://registry.npmjs.org/', './shen' ]
+108 verbose url resolved https://registry.npmjs.org/shen
+109 info trying registry request attempt 1 at 19:47:54
+110 http PUT https://registry.npmjs.org/shen
+111 http 409 https://registry.npmjs.org/shen
+112 verbose url raw shen
+113 verbose url resolving [ 'https://registry.npmjs.org/', './shen' ]
+114 verbose url resolved https://registry.npmjs.org/shen
+115 info trying registry request attempt 1 at 19:47:55
+116 http GET https://registry.npmjs.org/shen
+117 http 200 https://registry.npmjs.org/shen
+118 error publish fail Cannot publish over existing version.
+118 error publish fail Update the 'version' field in package.json and try again.
+118 error publish fail
+118 error publish fail If the previous version was published in error, see:
+118 error publish fail     npm help unpublish
+118 error publish fail
+118 error publish fail To automatically increment version numbers, see:
+118 error publish fail     npm help version
+119 error System Darwin 13.0.0
+120 error command "/Users/peterdecroos/.nvm/v0.11.11/bin/node" "/Users/peterdecroos/.nvm/v0.11.11/bin/npm" "publish"
+121 error cwd /Users/peterdecroos/projects/koa-visa/Shen
+122 error node -v v0.11.11
+123 error npm -v 1.3.25
+124 error code EPUBLISHCONFLICT
+125 verbose exit [ 1, true ]
