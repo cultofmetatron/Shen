@@ -110,7 +110,7 @@ to one of the generators inside the map.
 
 ```javascript
 
-  //code exmple coming soon
+  //code example coming soon
 
 ```
 
@@ -122,7 +122,7 @@ yielding to the parallel generator.
 
 ```javascript
 
-  //code exmple coming soon
+  //code example coming soon
 
 ```
 
@@ -133,11 +133,20 @@ yielding to the parallel generator.
 Takes a generator and timeout. it returns a generator that runs the 
 passed in generator after the timeout.
 
-TODO:
+```javascript
+
+  //code example coming soon
+
+```
 
 ####shen.oscillator(gen, interval)
 
 Takes a generator and returns a generator which returns an eventEmitter that
 calls a function with the return values from calling gen at specified intervals.
 
+```javascript
+
+  //code example coming soon
+
+```
 
