@@ -136,7 +136,25 @@ to one of the generators inside the map.
 
 ```javascript
 
-  //code example coming soon
+   it('should dispatch to a branch', function(done) {
+    
+    var genFunc = shen.dispatch(function *(paths) {
+      var foo =  yield paths['fuu'];
+      return foo;
+    }, {
+      fuu: function *() {
+        return 'yeaaaa';
+      }
+    });
+
+    co(genFunc)(function(err, value) {
+      value.should.equal('yeaaaa');
+      done();
+    });
+
+
+  });
+
 
 ```
 
@@ -148,7 +166,30 @@ yielding to the parallel generator.
 
 ```javascript
 
-  //code example coming soon
+  var genFunc = shen.cascade(function *(next) {
+      var vals = yield next;
+      return vals;
+    },
+    shen.parallel(
+      function *() {
+        return yield request('http://www.google.com').then(function() {
+          //console.log('wierd', arguments[0][1]);
+          return arguments[0][1];
+        });
+      },
+      function *() {
+        return 'two';
+      }));
+    
+    co(genFunc)(function(err, val) {
+      var countOne = !!val[0].match('google');
+      countOne.should.be.true;
+      
+      var countTwo = val[1] === 'two';
+      countTwo.should.be.true;
+      done();
+    });
+
 
 ```
 
@@ -161,7 +202,24 @@ passed in generator after the timeout.
 
 ```javascript
 
-  //code example coming soon
+  it('should delay timeout', function(done) {
+    this.timeout(10000);
+    var timeStamp = Date.now();
+    //defer = Promise.defer();
+    var start = Date.now();
+    //defer.resolve('resolved');
+    var genFunc = function *() {
+      var delay = Date.now() - timeStamp;
+      return delay;
+    };
+
+    co(shen.delay(genFunc, 3000))(function (err, delay) {
+      delay.should.be.greaterThan(2950);
+      done();
+    });
+
+  });
+
 
 ```
 
@@ -172,7 +230,41 @@ calls a function with the return values from calling gen at specified intervals.
 
 ```javascript
 
-  //code example coming soon
+  it('should run run the function over and over', function(done) {
+    this.timeout(10000);
+    var i = 0;
+    var test = function() { i++; };
+
+    var genFunc = shen.oscillator(function *() {
+      test();
+    }, 500);
+
+    co(genFunc)();
+
+    setTimeout(function() {
+      i.should.be.greaterThan(5);
+      done();
+    }, 6000);
+  });
+
+  xit('should let me stop the oscillation with stopTick()', function(done) {
+    this.timeout(10000);
+    var i = 0;
+    var test = function() { i++; };
+
+    var genFunc = shen.oscillator(function *() {
+      test();
+    }, 500);
+
+    co(genFunc)();
+
+    setTimeout(function(err, val) {
+      i.should.be.greaterThan(5);
+      done();
+    }, 6000);
+  });
+
+
 
 ```
 
