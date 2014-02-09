@@ -5,10 +5,10 @@ Shen
 #####(work in progress)
 
 There's still alot of work to be done on this repo. I'm putting it out there
-for people to try out early and let you all get a taste of what's to come. 
+for people to try out early and let you all get a taste of what's to come.
 
-If you'd like to contribute, I'd love ideas for things to impliment. 
-Its a brave new world so lets find out what makes sense! 
+If you'd like to contribute, I'd love ideas for things to impliment.
+Its a brave new world so lets find out what makes sense!
 Tests are also very much appreciated.
 
 you can run the tests supplied with
@@ -40,15 +40,16 @@ code even looks synchronous and the shnozberries taste like shnozberries!
 They are all nestable so you can build arbitrarily large generators from smaller ones like
 lego pieces.
 
-####shen.cascade(gen, ctx, [arg1, arg2 ...]);
+####shen.bind(gen, ctx, [arg1, arg2 ...]);
 Takes a generator and binds it to the context, optional args are partially applied to the
 returned generator.
 
 ```javascript
+  var shen = require('shen');
 
-  
-
-
+  var boundGenerator = shen.bind(function *() {
+    //etc
+  }, context);
 ```
 
 ####shen.cascade(gen1, gen2...genN);
