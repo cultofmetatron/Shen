@@ -4,6 +4,9 @@ var co      = require('co');
 var Promise = require('bluebird');
 var compose = require('koa-compose');
 var utils   = require('../lib/utils.js');
+
+var request = require('request');
+
 describe('Cascade', function() {
   
   it('should be a function', function() {
@@ -130,6 +133,11 @@ describe('Cascade', function() {
 
   });
 
+  xit('sould cascade up and down a a koa app', function(done) {
+  
+
+  
+  });
 
 });
 
