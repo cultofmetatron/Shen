@@ -5,7 +5,18 @@ Shen
 #####(work in progress)
 
 There's still alot of work to be done on this repo. I'm putting it out there
-for people to try out early and let you all get a taste of what's to come.
+for people to try out early and let you all get a taste of what's to come. 
+
+If you'd like to contribute, I'd love ideas for things to impliment. 
+Its a brave new world so lets find out what makes sense! 
+Tests are also very much appreciated.
+
+you can run the tests supplied with
+```
+  npm install
+  mocha --harmony test
+```
+Make sure to have node 0.11 installed or you'll be a sad panda!
 
 ##Higher order functions for generators
 
