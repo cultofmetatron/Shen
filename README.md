@@ -133,6 +133,11 @@ yielding to the parallel generator.
 Takes a generator and timeout. it returns a generator that runs the 
 passed in generator after the timeout.
 
+TODO:
 
+####shen.oscillator(gen, interval)
+
+Takes a generator and returns a generator which returns an eventEmitter that
+calls a function with the return values from calling gen at specified intervals.
 
 
