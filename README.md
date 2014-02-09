@@ -1,12 +1,26 @@
 Shen [![Build Status](https://travis-ci.org/cultofmetatron/Shen.png?branch=master)](https://travis-ci.org/cultofmetatron/Shen) [![dependency Status](https://david-dm.org/cultofmetatron/Shen/status.png?theme=shields.io)](https://david-dm.org/cultofmetatron/Shen#info=dependencies) [![devDependency Status](https://david-dm.org/cultofmetatron/Shen/dev-status.png?theme=shields.io)](https://david-dm.org/cultofmetatron/Shen#info=devDependencies)
 =============
 
-####higher order flow control functions for creating generators
-#####(work in progress, feel free to contribute ideas)
+####Higher order flow control functions for creating generators
+#####(work in progress)
+
+There's still alot of work to be done on this repo. I'm putting it out there
+for people to try out early and let you all get a taste of what's to come.
+
+If you'd like to contribute, I'd love ideas for things to impliment.
+Its a brave new world so lets find out what makes sense!
+Tests are also very much appreciated.
+
+you can run the tests supplied with
+```
+  npm install
+  mocha --harmony test
+```
+Make sure to have node 0.11 installed or you'll be a sad panda!
 
 ##Higher order functions for generators
 
-Generators are the new concurrency being implimented for ecmascript 6.
+Generators are the new concurrency primative slated for ecmascript 6.
 There is scant information on how generators work. The one really useful
 library I've seen out there is TJHollowaychuck's co module.
 
@@ -21,10 +35,22 @@ library I've seen out there is TJHollowaychuck's co module.
 
 Shen is a set of tools for constructing generators from smaller generators. Through,
 composition Shen allows you to assemble coroutines from smaller coroutines. The asychronous
-code even looks synchronous!
+code even looks synchronous and the shnozberries taste like shnozberries!
 
 They are all nestable so you can build arbitrarily large generators from smaller ones like
 lego pieces.
+
+####shen.bind(gen, ctx, [arg1, arg2 ...]);
+Takes a generator and binds it to the context, optional args are partially applied to the
+returned generator.
+
+```javascript
+  var shen = require('shen');
+
+  var boundGenerator = shen.bind(function *() {
+    //etc
+  }, context);
+```
 
 ####shen.cascade(gen1, gen2...genN);
 
@@ -110,7 +136,25 @@ to one of the generators inside the map.
 
 ```javascript
 
-  //code exmple coming soon
+   it('should dispatch to a branch', function(done) {
+
+    var genFunc = shen.dispatch(function *(paths) {
+      var foo =  yield paths['fuu'];
+      return foo;
+    }, {
+      fuu: function *() {
+        return 'yeaaaa';
+      }
+    });
+
+    co(genFunc)(function(err, value) {
+      value.should.equal('yeaaaa');
+      done();
+    });
+
+
+  });
+
 
 ```
 
@@ -122,7 +166,30 @@ yielding to the parallel generator.
 
 ```javascript
 
-  //code exmple coming soon
+  var genFunc = shen.cascade(function *(next) {
+      var vals = yield next;
+      return vals;
+    },
+    shen.parallel(
+      function *() {
+        return yield request('http://www.google.com').then(function() {
+          //console.log('wierd', arguments[0][1]);
+          return arguments[0][1];
+        });
+      },
+      function *() {
+        return 'two';
+      }));
+
+    co(genFunc)(function(err, val) {
+      var countOne = !!val[0].match('google');
+      countOne.should.be.true;
+
+      var countTwo = val[1] === 'two';
+      countTwo.should.be.true;
+      done();
+    });
+
 
 ```
 
@@ -133,6 +200,70 @@ yielding to the parallel generator.
 Takes a generator and timeout. it returns a generator that runs the
 passed in generator after the timeout.
 
+```javascript
+
+  it('should delay timeout', function(done) {
+    this.timeout(10000);
+    var timeStamp = Date.now();
+    //defer = Promise.defer();
+    var start = Date.now();
+    //defer.resolve('resolved');
+    var genFunc = function *() {
+      var delay = Date.now() - timeStamp;
+      return delay;
+    };
+
+    co(shen.delay(genFunc, 3000))(function (err, delay) {
+      delay.should.be.greaterThan(2950);
+      done();
+    });
+
+  });
+
+
+```
+
+####shen.oscillator(gen, interval)
+
+Takes a generator and returns a generator which returns an eventEmitter that
+calls a function with the return values from calling gen at specified intervals.
+
+```javascript
+
+  it('should run run the function over and over', function(done) {
+    this.timeout(10000);
+    var i = 0;
+    var test = function() { i++; };
+
+    var genFunc = shen.oscillator(function *() {
+      test();
+    }, 500);
+
+    co(genFunc)();
+
+    setTimeout(function() {
+      i.should.be.greaterThan(5);
+      done();
+    }, 6000);
+  });
+
+  xit('should let me stop the oscillation with stopTick()', function(done) {
+    this.timeout(10000);
+    var i = 0;
+    var test = function() { i++; };
+
+    var genFunc = shen.oscillator(function *() {
+      test();
+    }, 500);
+
+    co(genFunc)();
+
+    setTimeout(function(err, val) {
+      i.should.be.greaterThan(5);
+      done();
+    }, 6000);
+  });
 
 
 
+```
