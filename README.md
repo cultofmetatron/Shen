@@ -1,4 +1,4 @@
-Shen
+Shen [![Build Status](https://travis-ci.org/cultofmetatron/Shen.png?branch=master)](https://travis-ci.org/cultofmetatron/Shen) [![dependency Status](https://david-dm.org/cultofmetatron/Shen/status.png?theme=shields.io)](https://david-dm.org/cultofmetatron/Shen#info=dependencies) [![devDependency Status](https://david-dm.org/cultofmetatron/Shen/dev-status.png?theme=shields.io)](https://david-dm.org/cultofmetatron/Shen#info=devDependencies)
 =============
 
 ####Higher order flow control functions for creating generators
@@ -21,7 +21,7 @@ Make sure to have node 0.11 installed or you'll be a sad panda!
 ##Higher order functions for generators
 
 Generators are the new concurrency primative slated for ecmascript 6.
-There is scant information on how generators work. The one really useful 
+There is scant information on how generators work. The one really useful
 library I've seen out there is TJHollowaychuck's co module.
 
 ```javascript
@@ -56,7 +56,7 @@ returned generator.
 
 Takes one or more generators and returns a new generator that can be passed
 into a coroutine function. each generator is passed a *next* which allows you
-to yield downstream to the next generator on the list. 
+to yield downstream to the next generator on the list.
 
 ```javascript
 
@@ -92,7 +92,7 @@ to yield downstream to the next generator on the list.
 
 ####shen.branch(cond, path1, path2)
 
-Takes a three generators. The first one recieves links to the other two. 
+Takes a three generators. The first one recieves links to the other two.
 With this you can set up conditional branches to either path1 or path2.
 
 ```javascript
@@ -137,7 +137,7 @@ to one of the generators inside the map.
 ```javascript
 
    it('should dispatch to a branch', function(done) {
-    
+
     var genFunc = shen.dispatch(function *(paths) {
       var foo =  yield paths['fuu'];
       return foo;
@@ -180,11 +180,11 @@ yielding to the parallel generator.
       function *() {
         return 'two';
       }));
-    
+
     co(genFunc)(function(err, val) {
       var countOne = !!val[0].match('google');
       countOne.should.be.true;
-      
+
       var countTwo = val[1] === 'two';
       countTwo.should.be.true;
       done();
@@ -197,7 +197,7 @@ yielding to the parallel generator.
 
 ####shen.delay(gen, timeout)
 
-Takes a generator and timeout. it returns a generator that runs the 
+Takes a generator and timeout. it returns a generator that runs the
 passed in generator after the timeout.
 
 ```javascript
@@ -267,4 +267,3 @@ calls a function with the return values from calling gen at specified intervals.
 
 
 ```
-
