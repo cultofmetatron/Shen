@@ -329,4 +329,6 @@ app.use(function *() {
 app.listen(3000);
 ```
 
+You should see 'hello world 123456' in your browser!
+
 

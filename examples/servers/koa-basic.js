@@ -17,36 +17,38 @@ app.use(function *(next) {
 
 var foo = shen.cascade(
   function *(next) {
-    return yield next;
+    return (yield next) + 6;
   },
   shen.branch(function *( path1, path2) {
-      return yield path2;
+      return (yield path2)+ 5;
     },
     function *(next) {
-      return yield next;
+      //this never runs
+      return (yield next);
     },
     shen.cascade(
       function *(next) {
-        return yield next;
+        return (yield next) + 4;
       },
       function *(next) {
-        return yield next;
+        return (yield next) + 3;
       },
       function *(next) {
-        return yield next;
+        return (yield next) + 2;
       })),
  function *(next) {
-    return yield next;
+    return (yield next) + 1;
  });
 
 app.use(foo);
 
 
 app.use(function *() {
-  return "hello world";
+  return "hello world ";
 });
 
 
+console.log('now listening on port 3000');
 app.listen(3000);
 
 
