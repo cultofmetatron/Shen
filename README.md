@@ -282,10 +282,11 @@ The follow example shows how returns up the middleware chain are gracefully
 passed up.
 
 ```javascript
+
 var koa = require('koa');
 var app = koa();
 
-var shen = require('../../index.js');
+var shen = require('shen');
 
 app.use(function *(next) {
   this.status = 200;
@@ -294,39 +295,40 @@ app.use(function *(next) {
 
 var foo = shen.cascade(
   function *(next) {
-    return yield next;
+    return (yield next) + 6;
   },
   shen.branch(function *( path1, path2) {
-      return yield path2;
+      return (yield path2)+ 5;
     },
     function *(next) {
-      return yield next;
+      //this never runs
+      return (yield next);
     },
-    //this embedding is not supported with koa-compose but it works with shen!
     shen.cascade(
       function *(next) {
-        return yield next;
+        return (yield next) + 4;
       },
       function *(next) {
-        return yield next;
+        return (yield next) + 3;
       },
       function *(next) {
-        return yield next;
+        return (yield next) + 2;
       })),
  function *(next) {
-    return yield next;
+    return (yield next) + 1;
  });
 
 app.use(foo);
 
 
 app.use(function *() {
-  //this is returned up.
-  return "hello world";
+  return "hello world ";
 });
 
 
+console.log('now listening on port 3000');
 app.listen(3000);
+
 ```
 
 You should see 'hello world 123456' in your browser!
