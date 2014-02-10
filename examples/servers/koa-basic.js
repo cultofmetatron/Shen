@@ -1,3 +1,10 @@
+/* here's a basic example showing how nested you can
+ * embed the shen generator and still have it work in koa
+ *
+ * context is preserved throughout the chain
+ */
+
+
 var koa = require('koa');
 var app = koa();
 
