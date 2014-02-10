@@ -36,7 +36,7 @@ app.use(foo);
 
 
 app.use(function *() {
-  return "fuu";
+  return "hello world";
 });
 
 
