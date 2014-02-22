@@ -10,7 +10,9 @@ Shen 身
 > Higher order flow control functions for creating generators
 
 Compose coroutines and koa middleware using higher order functions!
-
+```bash
+npm install shen
+```
 ### in beta
 
 There's still alot of work to be done on this repo. I'm putting it out there
@@ -21,11 +23,11 @@ Its a brave new world so lets find out what makes sense!
 Tests are also very much appreciated.
 
 you can run the tests supplied with
+```bash
+npm install
+mocha --harmony test
 ```
-  npm install
-  mocha --harmony test
-```
-Make sure to have node 0.11 installed or you'll be a sad panda!
+Make sure to have node <b>0.11</b> installed or you'll be a sad panda!
 
 ##Higher order functions for generators
 
@@ -34,7 +36,7 @@ There is scant information on how generators work. The one really useful
 library I've seen out there is TJHollowaychuck's co module.
 
 ```javascript
-  var co      = require('co');
+  var co = require('co');
   co(function *() {
     var data = yield someAsyncTask();
     doStuffWithData(data);
