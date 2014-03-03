@@ -28,7 +28,7 @@
     "underscore": "^1.5.2",
     "bluebird": "^1.0.7",
     "gulp-uglify": "^0.2.1",
-    "gulp": "^3.5.2",
+    "gulp": "^3.5.2"
   },
   "license": "MIT",
   "engines": {
