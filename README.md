@@ -44,8 +44,8 @@ library I've seen out there is TJHollowaychuck's co module.
   })();
 ```
 
-Shen is a set of tools for constructing generators from smaller generators. Through,
-composition Shen allows you to assemble coroutines from smaller coroutines. The asychronous
+Shen is a set of tools for constructing generators from smaller generators. Through
+composition, Shen allows you to assemble coroutines from smaller coroutines. The asychronous
 code even looks synchronous and the shnozberries taste like shnozberries!
 
 They are all nestable so you can build arbitrarily large generators from smaller ones like
