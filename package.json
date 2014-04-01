@@ -15,9 +15,9 @@
   },
   "devDependencies": {
     "mocha": "~1.17.1",
-    "should": "~3.1.2",
+    "should": "~3.2.0",
     "request": "^2.34.0",
-    "gulp": "~3.5.2",
+    "gulp": "~3.6.0",
     "gulp-uglify": "~0.2.1",
     "koa": "^0.5.0",
     "underscore": "^1.6.0",
@@ -26,9 +26,7 @@
   "dependencies": {
     "co": "^3.0.4",
     "underscore": "^1.5.2",
-    "bluebird": "^1.0.7",
-    "gulp-uglify": "^0.2.1",
-    "gulp": "^3.5.2"
+    "bluebird": "^1.0.7"
   },
   "license": "MIT",
   "engines": {
