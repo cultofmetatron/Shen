@@ -58,9 +58,9 @@ returned generator.
 ```javascript
   var shen = require('shen');
 
-  var boundGenerator = shen.bind(function *() {
+  var boundGenerator = shen.bind(context, function *() {
     //etc
-  }, context);
+  });
 ```
 
 ####shen.cascade(gen1, gen2...genN);

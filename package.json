@@ -13,6 +13,9 @@
     "type": "git",
     "url": "https://github.com/cultofmetatron/Shen.git"
   },
+  "scripts": {
+    "test": "mocha --harmony"
+  },
   "devDependencies": {
     "mocha": "~1.17.1",
     "should": "~3.3.2",
