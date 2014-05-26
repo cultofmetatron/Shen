@@ -11,9 +11,6 @@ describe('Branch', function() {
       val.foo.should.equal("bar");
       done();
     });
-  
-  
-  
   })
 
 });
