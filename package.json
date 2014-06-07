@@ -18,18 +18,18 @@
   },
   "devDependencies": {
     "mocha": "~1.17.1",
-    "should": "~3.3.2",
+    "should": "~4.0.1",
     "request": "^2.34.0",
-    "gulp": "~3.6.0",
+    "gulp": "~3.7.0",
     "gulp-uglify": "~0.3.0",
-    "koa": "^0.6.1",
+    "koa": "^0.7.0",
     "underscore": "^1.6.0",
     "mocha": "^1.17.1"
   },
   "dependencies": {
     "co": "^3.0.4",
     "underscore": "^1.5.2",
-    "bluebird": "^1.0.7"
+    "bluebird": "^2.0.6"
   },
   "license": "MIT",
   "engines": {
