@@ -1,6 +1,6 @@
 {
   "name": "shen",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Peter de Croos <cultofmetatron@aumlogic.com>",
   "description": "Functional programming for generators",
   "contributors": [
