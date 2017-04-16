@@ -29,7 +29,7 @@ mocha --harmony test
 ```
 Make sure to have node <b>0.11</b> installed or you'll be a sad panda!
 
-##Higher order functions for generators
+## Higher order functions for generators
 
 Generators are the new concurrency primitive slated for ecmascript 6.
 There is scant information on how generators work. The one really useful
@@ -51,7 +51,7 @@ code even looks synchronous and the shnozberries taste like shnozberries!
 They are all nestable so you can build arbitrarily large generators from smaller ones like
 lego pieces.
 
-####shen.bind(gen, ctx, [arg1, arg2 ...]);
+#### shen.bind(gen, ctx, [arg1, arg2 ...]);
 Takes a generator and binds it to the context, optional args are partially applied to the
 returned generator.
 
@@ -63,7 +63,7 @@ returned generator.
   });
 ```
 
-####shen.cascade(gen1, gen2...genN);
+#### shen.cascade(gen1, gen2...genN);
 
 Takes one or more generators and returns a new generator that can be passed
 into a coroutine function. each generator is passed a *next* which allows you
@@ -101,7 +101,7 @@ to yield downstream to the next generator on the list.
   });
 ```
 
-####shen.branch(cond, path1, path2)
+#### shen.branch(cond, path1, path2)
 
 Takes a three generators. The first one receives links to the other two.
 With this you can set up conditional branches to either path1 or path2.
@@ -140,7 +140,7 @@ With this you can set up conditional branches to either path1 or path2.
   });
 ```
 
-####shen.dispatch(gen, map)
+#### shen.dispatch(gen, map)
 
 Takes a generator and an object of generators. Inside gen, you can yield control
 to one of the generators inside the map.
@@ -169,7 +169,7 @@ to one of the generators inside the map.
 
 ```
 
-####shen.parallel(gen1, gen2, gen3... genN)
+#### shen.parallel(gen1, gen2, gen3... genN)
 
 Takes one or more generators. All the generators are run asynchronously. The
 returned values can be returned upstream into an array yielded from the generators
@@ -206,7 +206,7 @@ yielding to the parallel generator.
 
 
 
-####shen.delay(gen, timeout)
+#### shen.delay(gen, timeout)
 
 Takes a generator and timeout. it returns a generator that runs the
 passed in generator after the timeout.
@@ -234,7 +234,7 @@ passed in generator after the timeout.
 
 ```
 
-####shen.oscillator(gen, interval)
+#### shen.oscillator(gen, interval)
 
 Takes a generator and returns a generator which returns an eventEmitter that
 calls a function with the return values from calling gen at specified intervals.
@@ -277,7 +277,7 @@ calls a function with the return values from calling gen at specified intervals.
 
 ```
 
-###Koa compatibility
+### Koa compatibility
 
 You can compose together koa middleware using shen functions.
 The follow example shows how returns up the middleware chain are gracefully 
