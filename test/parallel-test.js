@@ -2,10 +2,8 @@ var should  = require('should');
 var shen    = require('../index.js');
 var co      = require('co');
 var Promise = require('bluebird');
-var compose = require('koa-compose');
-var utils   = require('../lib/utils.js');
 var _       = require('underscore');
-var request = Promise.promisify(require('request'));
+var request = Promise.promisify(require('request'), {multiArgs: true});
 
 
 describe('parallel', function() {
